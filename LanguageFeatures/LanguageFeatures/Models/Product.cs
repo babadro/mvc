@@ -32,8 +32,8 @@ namespace LanguageFeatures.Models
 
         public decimal Price
         {
-            get { return piece; }
-            set { piece = value; }
+            get { return price; }
+            set { price = value; }
         } 
         
         public string Category

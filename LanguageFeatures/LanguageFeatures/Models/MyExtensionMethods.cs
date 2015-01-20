@@ -5,7 +5,7 @@ using System.Web;
 
 namespace LanguageFeatures.Models
 {
-    public class MyExtensionMethods
+    public static class MyExtensionMethods
     {
         public static decimal TotalPrices(this IEnumerable<Product> productEnum)
         {
