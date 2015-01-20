@@ -1,0 +1,6 @@
+C:\Users\postgres\Source\Repos\MVC\MyCarDelegate\MyCarDelegate\bin\Debug\MyCarDelegate.exe.config
+C:\Users\postgres\Source\Repos\MVC\MyCarDelegate\MyCarDelegate\obj\Debug\MyCarDelegate.csprojResolveAssemblyReference.cache
+C:\Users\postgres\Source\Repos\MVC\MyCarDelegate\MyCarDelegate\bin\Debug\MyCarDelegate.exe
+C:\Users\postgres\Source\Repos\MVC\MyCarDelegate\MyCarDelegate\bin\Debug\MyCarDelegate.pdb
+C:\Users\postgres\Source\Repos\MVC\MyCarDelegate\MyCarDelegate\obj\Debug\MyCarDelegate.exe
+C:\Users\postgres\Source\Repos\MVC\MyCarDelegate\MyCarDelegate\obj\Debug\MyCarDelegate.pdb
