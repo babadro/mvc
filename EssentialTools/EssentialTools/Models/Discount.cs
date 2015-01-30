@@ -12,6 +12,6 @@ namespace EssentialTools.Models
         {
             return (totalParam - (10m / 100m * totalParam));
         }
-
+        /* My comment */
     }
 }
