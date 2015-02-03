@@ -62,7 +62,12 @@ namespace EssentialTools.Tests
             decimal FiveHundredDOllarDiscount = target.ValueProducts(createProduct(500));
 
             // assert
-            Assert.AreEqual()
+            Assert.AreEqual(5, FiveDollarDiscount, "$5 Fail");
+            Assert.AreEqual(5, TenDollarDiscount, "$10 Fail");
+            Assert.AreEqual(45, FiftyDollarDiscount, "$50 Fail");
+            Assert.AreEqual(95, HundredDollarDiscount, "$100 Fail");
+            Assert.AreEqual(450, FiveDollarDiscount, "$500 Fail");
+            target.ValueProducts(createProduct(0));
         }
     }
 }
