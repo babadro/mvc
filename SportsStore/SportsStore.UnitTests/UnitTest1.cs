@@ -5,7 +5,7 @@ namespace SportsStore.UnitTests
 {
     [TestClass]
     public class UnitTest1
-    {
+    { // test
         [TestMethod]
         public void TestMethod1()
         {
