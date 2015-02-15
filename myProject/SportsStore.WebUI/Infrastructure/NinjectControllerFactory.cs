@@ -9,7 +9,6 @@ using System.Linq;
 using Moq;
 using SportsStore.Domain.Concrete;
 
-
 namespace SportsStore.WebUI.Infrastructure
 {
     public class NinjectControllerFactory : DefaultControllerFactory
