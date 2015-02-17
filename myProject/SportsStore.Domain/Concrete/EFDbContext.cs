@@ -1,9 +1,9 @@
-﻿using SportsStore.Domain.Entities;
-using System.Data.Entity;
+﻿using System.Data.Entity;
+using SportsStore.Domain.Entities;
 
 namespace SportsStore.Domain.Concrete
 {
-    class EFDbContext : DbContext
+    public class EFDbContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
     }

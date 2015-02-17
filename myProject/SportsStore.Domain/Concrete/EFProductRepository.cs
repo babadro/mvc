@@ -1,6 +1,6 @@
-﻿using SportsStore.Domain.Abstract;
+﻿using System.Linq;
 using SportsStore.Domain.Entities;
-using System.Linq;
+using SportsStore.Domain.Abstract;
 
 namespace SportsStore.Domain.Concrete
 {
@@ -8,8 +8,7 @@ namespace SportsStore.Domain.Concrete
     {
         private EFDbContext context = new EFDbContext();
 
-        public IQueryable<Product> Products
-        {
+        public IQueryable<Product> Products {
             get { return context.Products; }
         }
     }
