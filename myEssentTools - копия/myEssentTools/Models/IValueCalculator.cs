@@ -4,6 +4,6 @@ namespace myEssentTools.Models
 {
     public interface IValueCalculator
     {
-        decimal ValueProducts(IEnumerable<Product> Products);
+        decimal ValueProducts(IEnumerable<Product> products);
     }
 }

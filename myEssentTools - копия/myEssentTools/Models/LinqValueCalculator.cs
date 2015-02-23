@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
+
 namespace myEssentTools.Models
 {
     public class LinqValueCalculator : IValueCalculator
@@ -9,6 +10,5 @@ namespace myEssentTools.Models
         {
             return products.Sum(p => p.Price);
         }
-
     }
 }
