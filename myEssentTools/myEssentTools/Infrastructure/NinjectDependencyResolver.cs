@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Configuration;
-using System.Collections.Generic;
 using System.Web.Mvc;
+using System.Collections.Generic;
 using Ninject;
 using Ninject.Parameters;
 using Ninject.Syntax;
 using myEssentTools.Models;
-
 
 namespace myEssentTools.Infrastructure
 {
@@ -36,7 +35,8 @@ namespace myEssentTools.Infrastructure
             kernel.Bind<IDiscountHelper>().
                 To<DefaultDiscountHelper>().WithConstructorArgument("discountParam", 50M);
             kernel.Bind<IDiscountHelper>().To<FlexibleDiscountHelper>()
-                .WhenInjectedInto<LinqValueCalculator>();
+                .WhenInjectedInto<LinqValueCalculator>(); 
+            
         }
     }
 }

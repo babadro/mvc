@@ -1,13 +1,13 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Ninject;
-using SportsStore.Domain.Entities;
 using SportsStore.Domain.Abstract;
-using System.Collections.Generic;
-using System.Linq;
-using Moq;
 using SportsStore.Domain.Concrete;
+using SportsStore.Domain.Entities;
+using Ninject;
+using Moq;
 
 namespace SportsStore.WebUI.Infrastructure
 {

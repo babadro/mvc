@@ -11,6 +11,7 @@ namespace myEssentTools.Models
         {
             discounter = discountParam;
         }
+
         public decimal ValueProducts(IEnumerable<Product> products)
         {
             return discounter.ApplyDiscount(products.Sum(p => p.Price));
