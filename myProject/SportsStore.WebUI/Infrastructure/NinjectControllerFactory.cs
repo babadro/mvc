@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
-using SportsStore.Domain.Abstract;
-using SportsStore.Domain.Concrete;
 using SportsStore.Domain.Entities;
+using SportsStore.Domain.Concrete;
+using SportsStore.Domain.Abstract;
 using Ninject;
 using Moq;
 
@@ -33,3 +33,4 @@ namespace SportsStore.WebUI.Infrastructure
         }
     }
 }
+

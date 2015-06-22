@@ -5,13 +5,12 @@ namespace myEssentTools.Models
     public class ShoppingCart
     {
         private IValueCalculator calc;
-        public ShoppingCart(IValueCalculator calcParam) 
+        public ShoppingCart(IValueCalculator calcParam)
         {
             calc = calcParam;
         }
         public IEnumerable<Product> Products { get; set; }
-        public decimal CalculateProductTotal()
-        {
+        public decimal CalculateProductTotal() {
             return calc.ValueProducts(Products);
         }
     }
