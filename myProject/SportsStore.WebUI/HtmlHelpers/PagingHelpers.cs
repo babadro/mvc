@@ -12,7 +12,7 @@ namespace SportsStore.WebUI.HtmlHelpers
             StringBuilder result = new StringBuilder();
             for (int i = 1; i <= pagingInfo.TotalPages; i++)
             {
-                TagBuilder tag = new TagBuilder("a");
+                TagBuilder tag = new TagBuilder("a"); // Construct an <a> tag
                 tag.MergeAttribute("href", pageUrl(i));
                 tag.InnerHtml = i.ToString();
                 if (i == pagingInfo.CurrentPage)
