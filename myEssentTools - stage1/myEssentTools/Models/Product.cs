@@ -1,4 +1,4 @@
-
+﻿
 namespace myEssentTools.Models
 {
     public class Product

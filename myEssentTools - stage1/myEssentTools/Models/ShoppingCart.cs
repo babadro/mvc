@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 
 namespace myEssentTools.Models
@@ -9,7 +8,7 @@ namespace myEssentTools.Models
         private IValueCalculator calc;
         public ShoppingCart(IValueCalculator calcParam)
         {
-        calc = calcParam;
+            calc = calcParam;
         }
         public IEnumerable<Product> Products { get; set; }
         public decimal CalculateProductTotal()

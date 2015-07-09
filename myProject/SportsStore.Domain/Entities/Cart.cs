@@ -9,7 +9,6 @@ namespace SportsStore.Domain.Entities
     public class Cart
     {
         private List<CartLine> lineCollection = new List<CartLine>();
-
         public void AddItem(Product product, int quantity)
         {
             CartLine line = lineCollection
@@ -39,6 +38,7 @@ namespace SportsStore.Domain.Entities
         {
             return lineCollection.Sum(e => e.Product.Price * e.Quantity);
         }
+
         public void Clear()
         {
             lineCollection.Clear();
@@ -48,10 +48,12 @@ namespace SportsStore.Domain.Entities
         {
             get { return lineCollection; }
         }
+
+        
     }
 
-    public class CartLine {
+    public class CartLine{
         public Product Product {get; set;}
-        public int Quantity {get; set; }
+        public int Quantity {get; set;}
     }
 }

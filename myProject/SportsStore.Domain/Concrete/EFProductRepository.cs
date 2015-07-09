@@ -2,8 +2,6 @@
 using SportsStore.Domain.Entities;
 using System.Linq;
 
-// comment
-
 namespace SportsStore.Domain.Concrete
 {
     public class EFProductRepository : IProductRepository
