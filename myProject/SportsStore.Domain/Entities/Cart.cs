@@ -1,8 +1,6 @@
-﻿using System;
+﻿using SportsStore.Domain.Entities;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SportsStore.Domain.Entities
 {
@@ -31,7 +29,7 @@ namespace SportsStore.Domain.Entities
 
         public void RemoveLine(Product product)
         {
-            lineCollection.RemoveAll(l => l.Product.ProductID == product.ProductID);
+            lineCollection.RemoveAll(p => p.Product.ProductID == product.ProductID);
         }
 
         public decimal ComputeTotalValue()
@@ -48,12 +46,10 @@ namespace SportsStore.Domain.Entities
         {
             get { return lineCollection; }
         }
-
-        
     }
 
-    public class CartLine{
-        public Product Product {get; set;}
-        public int Quantity {get; set;}
+    public class CartLine {
+        public Product Product;
+        public int Quantity;
     }
 }
