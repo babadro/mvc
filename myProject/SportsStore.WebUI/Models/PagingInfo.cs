@@ -9,7 +9,9 @@ namespace SportsStore.WebUI.Models
         public int CurrentPage { get; set; }
         public int TotalPages
         {
+
             get { return (int)Math.Ceiling((decimal)TotalItems / ItemsPerPage); }
+
         }
     }
 }

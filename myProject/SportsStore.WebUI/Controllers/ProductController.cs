@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SportsStore.Domain.Abstract;
 using SportsStore.Domain.Entities;
+using SportsStore.Domain.Abstract;
 using SportsStore.WebUI.Models;
 
 namespace SportsStore.WebUI.Controllers
@@ -18,27 +18,29 @@ namespace SportsStore.WebUI.Controllers
         {
             this.repository = productRepository;
         }
-        
+
         public ViewResult List(string category, int page = 1)
         {
             ProductsListViewModel model = new ProductsListViewModel
             {
                 Products = repository.Products
-                .Where(p => category == null || p.Category == category)
-                .OrderBy(p => p.ProductID)
-                .Skip((page - 1) * PageSize)
-                .Take(PageSize),
+                    .Where(p => category == null || p.Category == category)
+                    .OrderBy(p => p.ProductID)
+                    .Skip((page - 1) * PageSize)
+                    .Take(PageSize),
+
                 PagingInfo = new PagingInfo
                 {
                     CurrentPage = page,
-                    ItemsPerPage = PageSize,
-                    TotalItems = category == null ?
+                    TotalItems = PageSize,
+                    ItemsPerPage = category == null ?
                         repository.Products.Count() :
-                        repository.Products.Where(e => e.Category == category).Count()
+                        repository.Products.Where(p => p.Category == category).Count()
                 },
+
                 CurrentCategory = category
             };
-
+            
             return View(model);
         }
 
