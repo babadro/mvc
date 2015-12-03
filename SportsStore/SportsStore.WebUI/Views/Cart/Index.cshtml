@@ -23,6 +23,24 @@
                 <td align="left">@line.Product.Name</td>
                 <td align="right">@line.Product.Price.ToString("c")</td>
                 <td align="right">@((line.Quantity * line.Product.Price).ToString("c"))</td>
+                <td>
+					/* Кстати, здесь работает регистронизависимость - если написать removefromcart 
+					вместо RemoveFromCart - метод контроллера, куда передается эта форма, все равно распознает параметр
+					*/
+					
+                    @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                    {
+                        @Html.Hidden("ProductId", line.Product.ProductID)
+						
+						/* HiddenFor обращается к модели (CartIndexViewModel).
+						Создает поле input с именем ReturnUrl и соответствующим значением
+						Предыдущая строка не может его использовать, т.к. создастся поле с именем 
+						line.Product.ProductID, что не будет соответствовать параметру метода RemoveFromCart
+						*/
+                        @Html.HiddenFor(x => x.ReturnUrl)
+                        <input class="actionButtons" type="submit" value="Remove" />
+                    }
+                </td>
             </tr>
         }
     </tbody>
@@ -33,6 +51,10 @@
         </td>
         </tr></tfoot>
 </table>
+
+/* То, что метод Checkout надо искать в контроллере Cart видимо, следует из того, что
+этот View (Index то есть) лежит в папке Cart и таким образом указывает на контроллер */
 <p align="center" class="actionButtons">
     <a href="@Model.ReturnUrl">Continue shopping</a>
+    @Html.ActionLink("Checkout now", "Checkout")
 </p>
